@@ -1,0 +1,28 @@
+start tasmota lightbulb with specific brightness depending on time of day
+Tasmota Lampe abhängig von der Tageszeit mit bestimmter Helligkeit einschalten
+
+V5 
+// PowerOnState 0 - Light is off on startup - beim Anschalten Licht auslassen
+// SetOption20 1 - Light is not automaticly turned on when values are changed - Wertänderung schaltet Licht nicht automatisch ein 
+// Dimmer 20 - Brightness 20% - Helligkeit auf 20% 
+// Power 1 - Light on - Licht an
+// When time is available set time to zeit
+// Wenn Zeit erfügbar übernehme Uhrzeit in Variable zeit
+// at 6.00 am 80% - at 11.00 pm 20% - Values are minutes from 0.00
+// ab 6.00 80% - ab 23.00 20% - Werte sind Minuten ab 0.00
+
+mark and copy all the stuff to the tasmota console and hit enter
+feel free to change anything for your needs
+Alles markieren und in die Tasmota Konsole einfügen, mit Enter bestätigen
+Ändere den Code nach deinem Geschmack
+
+backlog 
+poweronstate 0; 
+setoption20 1; 
+rule1 
+on Power1#Boot do dimmer 20 endon 
+on Power1#Boot do power 1 endon 
+on Time#Initialized do event zeit=%time% endon  
+on event#zeit>360 do dimmer 80 endon  
+on event#zeit>1380 do dimmer 20 endon;
+rule1 1 
