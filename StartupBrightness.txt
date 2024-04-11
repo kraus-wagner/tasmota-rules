@@ -11,10 +11,12 @@ V5
 // at 6.00 am 80% - at 11.00 pm 20% - Values are minutes from 0.00
 // ab 6.00 80% - ab 23.00 20% - Werte sind Minuten ab 0.00
 
-mark and copy all the stuff to the tasmota console and hit enter
+mark and copy all the stuff starting with backlog to the tasmota console and hit enter
 feel free to change anything for your needs
-Alles markieren und in die Tasmota Konsole einfügen, mit Enter bestätigen
+Alles ab backlog markieren und in die Tasmota Konsole einfügen, mit Enter bestätigen
 Ändere den Code nach deinem Geschmack
+
+code starts here -->
 
 backlog 
 poweronstate 0; 
