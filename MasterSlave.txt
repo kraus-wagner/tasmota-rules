@@ -2,4 +2,5 @@ backlog
 rule1  
 on energy#power>50 do websend [x.x.x.x] power1 1 endon  
 on energy#power<40 do websend [x.x.x.x] power1 0 endon;  
-rule1 1
+rule1 1;
+rule1 5
