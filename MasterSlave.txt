@@ -1,3 +1,8 @@
+// power>50 change to your needs (when master power is more than 50 watts - less than minimum power)  
+// power<40 (when master power is less than 40 watts - more than standby)
+// rule1 5 websend is only executed once on change on/off  
+// x.x.x.x tasmota client ip  
+
 backlog  
 rule1  
 on energy#power>50 do websend [x.x.x.x] power1 1 endon  
