@@ -1,7 +1,10 @@
 # tasmota-rules
 
 StartupBrightness.txt <br>
-start tasmota lightbulb with specific brightness depending on time of day <br>
+My tasmota bulbs are not always online but connected to a wall switch.<br>
+They are hard connected to current when i switch on.<br>
+At night i want to start with dimmed light.<br>
+Start tasmota lightbulb with specific brightness depending on time of day. <br>
 Tasmota Lampe abhängig von der Tageszeit mit bestimmter Helligkeit einschalten <br>
 
 MasterSlave.txt<br>
